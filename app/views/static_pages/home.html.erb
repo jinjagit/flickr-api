@@ -1,0 +1,4 @@
+<%= "Home" %>
+<% @photos.each do |photo| %>
+  <%= image_tag photo.source_url, size: "#{photo.width}x#{photo.height}" %>
+<% end %>

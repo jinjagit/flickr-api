@@ -36,6 +36,8 @@ gem 'jbuilder', '~> 2.5'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '1.1.2'
+gem "flickr-objects"
+gem 'figaro'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
