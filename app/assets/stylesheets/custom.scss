@@ -39,6 +39,11 @@ body {
 
 /* header */
 
+.navbar {
+  position: fixed;
+  top: 0;
+}
+
 header {
   background-color: black !important;
   //border-style: solid;
