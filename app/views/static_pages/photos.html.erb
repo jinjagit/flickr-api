@@ -4,13 +4,24 @@
 <%= "n of photos returned: #{@total}" %><br>
 <%= will_paginate @photos %>
 
-
-<div class="d-block d-md-none"  style="width:100%;">
-  <%= "MOBILE" %>
-  <div class="row">
+<!-- mobile -->
+<div class="hidden-lg hidden-md"  style="width:100%;">
+  <div class=" row">
       <% @photos.each do |photo| %>
         <%= image_tag photo.source_url, class: 'img-responsive' %>
       <% end %>
   </div>
 </div>
+
+<!-- desktop -->
+<div class="hidden-sm hidden-xs center-box">
+</div>
+<div class="hidden-sm hidden-xs center-box">
+  <% @photos.each do |photo| %>
+    <%= image_tag photo.source_url, size: "#{photo.width}x#{photo.height}", class: 'photo' %>
+    <%#= photo.id %>
+  <% end %>
+</div>
+
+
 <%= will_paginate @photos %>
