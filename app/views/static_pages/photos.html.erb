@@ -2,9 +2,14 @@
 <%= "real name: #{@info.real_name}" %><br>
 <%= "total n of public photos: #{@info.photos_count}" %><br>
 <%= "n of photos returned: #{@total}" %><br>
-<span class="digg_pagination" style="max-width:100%;">
-  <%= will_paginate @photos, inner_window: 1, outer_window: 1 %>
-</span>
+
+<div class="hidden-lg hidden-md digg_pagination">
+  <%= will_paginate @photos, inner_window: 0, outer_window: 0 %>
+</div>
+
+<div class="hidden-sm hidden-xs digg_pagination">
+  <%= will_paginate @photos, inner_window: 3, outer_window: 1 %>
+</div>
 
 <!-- mobile -->
 <div class="hidden-lg hidden-md"  style="width:100%;">
@@ -25,6 +30,10 @@
   <% end %>
 </div>
 
-<div style="display:block;">
-  <%= will_paginate @photos %>
+<div class="hidden-lg hidden-md digg_pagination" style="display:block;">
+  <%= will_paginate @photos, inner_window: 0, outer_window: 0 %>
+</div>
+
+<div class="hidden-sm hidden-xs digg_pagination">
+  <%= will_paginate @photos, inner_window: 3, outer_window: 1 %>
 </div>
