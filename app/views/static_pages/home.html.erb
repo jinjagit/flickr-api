@@ -1,8 +1,1 @@
-<%= "username: #{@info.username}" %><br>
-<%= "real name: #{@info.real_name}" %><br>
-<%= "total n of public photos: #{@info.photos_count}" %><br>
-<%= "n of photos returned: #{@photos.length}" %><br>
-<% @photos.each do |photo| %>
-  <%= image_tag photo.source_url, size: "#{photo.width}x#{photo.height}" %>
-  <%#= photo.id %>
-<% end %>
+<%= link_to "find photos", photos_path, style: "color: blue" %>

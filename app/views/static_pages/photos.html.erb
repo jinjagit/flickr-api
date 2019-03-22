@@ -1,0 +1,12 @@
+<%= "username: #{@info.username}" %><br>
+<%= "real name: #{@info.real_name}" %><br>
+<%= "total n of public photos: #{@info.photos_count}" %><br>
+<%= "n of photos returned: #{@photos.length}" %><br>
+<%= will_paginate @photos %>
+<div class="center-box">
+  <% @photos.each do |photo| %>
+    <%= image_tag photo.source_url, size: "#{photo.width}x#{photo.height}", class: 'photo' %>
+    <%#= photo.id %>
+  <% end %>
+  <%= will_paginate @photos %>
+</div>

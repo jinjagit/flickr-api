@@ -1,0 +1,19 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+  background-color: #999;
+}
+
+.container {
+  width: 100%;
+  text-align: center;
+}
+
+.center-box {
+  display: inline-block;
+  margin: auto;
+}
+.photo {
+  margin-bottom: 4px;
+}
