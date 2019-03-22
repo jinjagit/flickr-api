@@ -2,6 +2,13 @@
 
 Simon Tharby's solution to [Project 2: Using a Third Party API](https://www.theodinproject.com/courses/ruby-on-rails/lessons/apis?ref=lnav), Project: APIS, Ruby on Rails unit, Odin Project.
 
+## My additional features:
+
+As well as satisfying the project criteria, I also added the following features:
+
+  * mobile/desktop responsive layout (all views)
+  * pagination of photo display, using 'will-paginate' gem
+
 ## Getting started:
 
 To get started with the app, clone the repo and then install the needed gems:

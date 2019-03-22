@@ -2,13 +2,15 @@
 <%= "real name: #{@info.real_name}" %><br>
 <%= "total n of public photos: #{@info.photos_count}" %><br>
 <%= "n of photos returned: #{@total}" %><br>
-<%= will_paginate @photos %>
+<span class="digg_pagination" style="max-width:100%;">
+  <%= will_paginate @photos, inner_window: 1, outer_window: 1 %>
+</span>
 
 <!-- mobile -->
 <div class="hidden-lg hidden-md"  style="width:100%;">
   <div class=" row">
       <% @photos.each do |photo| %>
-        <%= image_tag photo.source_url, class: 'img-responsive' %>
+        <%= image_tag photo.source_url, class: 'img-responsive center' %>
       <% end %>
   </div>
 </div>
@@ -23,5 +25,6 @@
   <% end %>
 </div>
 
-
-<%= will_paginate @photos %>
+<div style="display:block;">
+  <%= will_paginate @photos %>
+</div>
