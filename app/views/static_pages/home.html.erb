@@ -3,7 +3,7 @@
     <%= form_for(:find_by, url: photos_path, method: :get) do |f| %>
 
       <%= f.label :id %>
-      <%= f.text_field :id, required: true, class: 'form-control field', style: "width:80%;margin-left:10%;color:black;", value: "24448805@N07" %>
+      <%= f.text_field :id, class: 'form-control field', style: "width:80%;margin-left:10%;color:black;", value: "24448805@N07" %>
 
       <%= f.submit "find by ID", class: "btn btn-primary" %>
     <% end %>
