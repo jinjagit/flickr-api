@@ -1,4 +1,5 @@
 class StaticPagesController < ApplicationController
+  require 'will_paginate/array'
 
   def home
   end
