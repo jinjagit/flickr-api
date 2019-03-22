@@ -3,16 +3,20 @@
   <head>
     <title>FlickrApi</title>
     <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,900" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= render 'layouts/shim' %>
   </head>
 
   <body>
+    <%= render 'layouts/header' %>
     <div class="container">
       <%= yield %>
       <div style="height:30px;"></div>
       <%= debug(params) if Rails.env.development? %>
     </div>
+
   </body>
 </html>

@@ -1,8 +1,19 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+$white: white;
+$dark-blue: #0046a8;
+$light-blue: #c9dfff;
+
 body {
+  font-family: 'Rubik', sans-serif;
   background-color: #999;
+  padding-top: 60px;
+}
+
+img {
+  display: block;
+  margin: auto;
 }
 
 .container {
@@ -16,4 +27,32 @@ body {
 }
 .photo {
   margin-bottom: 4px;
+}
+
+/* header */
+
+header {
+  //background-color: $dark-blue !important;
+  //border-style: solid;
+  //border-bottom-width: 7px !important;
+  //border-color: $white !important;
+}
+
+#logo {
+  float: left;
+  //margin: auto;
+  font-family: 'Rubik:900', sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+  color: $white;
+  letter-spacing: 1px;
+  padding-top: 6px;
+  &:hover {
+    color: $light-blue;
+    text-decoration: none;
+  }
+}
+
+#hdr_link {
+  float: right;
 }

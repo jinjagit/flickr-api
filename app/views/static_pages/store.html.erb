@@ -1,0 +1,10 @@
+<img class="img-fluid" src=photo.source_url>
+
+
+<div class="center-box">
+  <%= "DESKTOP", class: 'd-none d-md-block' %>
+  <% @photos.each do |photo| %>
+    <%= image_tag photo.source_url, size: "#{photo.width}x#{photo.height}", class: 'd-none d-md-block photo' %>
+    <%#= photo.id %>
+  <% end %>
+</div>
