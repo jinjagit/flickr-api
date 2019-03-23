@@ -7,9 +7,6 @@
   box-sizing:         border-box;
 }
 
-$dark-blue: #0046a8;
-$light-blue: #c9dfff;
-
 h4 {
   color: white;
 }
@@ -26,35 +23,6 @@ body {
   padding: 0px;
 }
 
-.center-box {
-  display: inline-block;
-  margin: auto;
-}
-.photo {
-  margin-bottom: 4px;
-  //vertical-align: bottom;
-}
-
-.center {
-  display: inline-block;
-  text-align: center;
-}
-
-.form {
-  width: 70%;
-  max-width: 400px;
-}
-
-.info {
-  width: 40%;
-  max-width: 150px;
-}
-
-.album {
-  width: 40%;
-  max-width: 130px;
-}
-
 /* header */
 
 .navbar {
@@ -64,9 +32,6 @@ body {
 
 header {
   background-color: black !important;
-  //border-style: solid;
-  //border-bottom-width: 7px !important;
-  //border-color: $white !important;
 }
 
 #logo {
@@ -79,7 +44,7 @@ header {
   letter-spacing: 1px;
   padding-top: 6px;
   &:hover {
-    color: $light-blue;
+    color: #ccc;
     text-decoration: none;
   }
 }
@@ -105,6 +70,7 @@ input {
 
 .field {
   border-color: black !important;
+  color:black;
 }
 
 .btn-primary, .btn-primary:active, .btn-primary:visited {
@@ -117,15 +83,24 @@ input {
   border-color: #999;
 }
 
-/* misc */
-
-.dark {
-  width: 100%;
-  background-color: #333;
+.form {
+  width: 70%;
+  max-width: 400px;
 }
 
+.info {
+  width: 40%;
+  max-width: 150px;
+}
+
+.album {
+  width: 40%;
+  max-width: 130px;
+}
+
+/* pagination */
+
 .digg_pagination {
-  //background: white;
   cursor: default;
   /* self-clearing method: */ }
   .digg_pagination a, .digg_pagination span, .digg_pagination em {
@@ -159,3 +134,24 @@ input {
     height: 1%; }
   *:first-child + html .digg_pagination {
     overflow: hidden; }
+
+/* misc */
+
+.dark {
+  width: 100%;
+  background-color: #333;
+}
+
+.center-box {
+  display: inline-block;
+  margin: auto;
+}
+
+.photo {
+  margin-bottom: 4px;
+}
+
+.center {
+  display: inline-block;
+  text-align: center;
+}

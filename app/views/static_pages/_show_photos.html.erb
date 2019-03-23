@@ -8,7 +8,6 @@
   <%= will_paginate @photos, inner_window: 3, outer_window: 1 %>
 </div>
 
-<!-- mobile -->
 <div class="hidden-lg hidden-md"  style="width:100%;">
   <div class="row">
       <% @photos.each do |photo| %>
@@ -19,14 +18,10 @@
   </div>
 </div>
 
-<!-- desktop -->
-<div class="hidden-sm hidden-xs center-box">
-</div>
 <div class="hidden-sm hidden-xs center-box">
   <% @photos.each do |photo| %>
     <%= link_to "http://flickr.com/photo.gne?id=#{photo.id}" do %>
       <%= image_tag photo.source_url, size: "#{photo.width}x#{photo.height}", class: 'photo' %>
-      <%#= photo.id %>
     <% end %>
   <% end %>
 </div>
