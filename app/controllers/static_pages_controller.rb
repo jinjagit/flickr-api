@@ -50,7 +50,6 @@ class StaticPagesController < ApplicationController
 
   def album
     @photos = []
-    album_id = params[:album][:set_id]
     @title = params[:album][:title]
     @id = params[:album][:user_id]
     person = Flickr.people.find(@id)

@@ -11,7 +11,7 @@
     <%= form_for(:show, url: photos_path, method: :get) do |f| %>
       <%= f.hidden_field :user_id, value: @info.id %>
 
-      <%= f.submit "view all photos", class: "btn btn-primary", style: "width:40%" %>
+      <%= f.submit "view all photos", class: "btn btn-primary info" %>
     <% end %>
   </div>
 </div>
@@ -21,7 +21,7 @@
     <%= form_for(:show, url: albums_path, method: :get) do |f| %>
       <%= f.hidden_field :user_id, value: @info.id %>
 
-      <%= f.submit "view album(s)", class: "btn btn-primary", style: "width:40%" %>
+      <%= f.submit "view album(s)", class: "btn btn-primary info" %>
     <% end %>
   </div>
 </div>

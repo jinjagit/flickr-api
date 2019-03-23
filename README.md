@@ -10,7 +10,8 @@ As well as satisfying the project criteria, I also added the following features:
   * pagination of photo display, using 'will-paginate' gem
   * find Flickr user via user id or username
   * return basic info of Flickr user (id, username, real name, total public photos count, public albums count)
-  * view all photos or view by album (select album title)
+  * view all Flickr user's photos or view by album (select album title)
+  * clicking on photo redirects to Flickr photo page
 
 ## Getting started:
 
