@@ -1,0 +1,18 @@
+<h4><%= "Albums:" %></h4><br>
+
+<% @sets.each do |set| %>
+  <h4><%= "#{set.title}" %></h4>
+  <div style="height:5px;"></div>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= form_for(:album, url: album_path, method: :get) do |f| %>
+        <%= f.hidden_field :set_id, value: set.id %>
+        <%= f.hidden_field :title, value: set.title %>
+        <%= f.hidden_field :user_id, value: @id %>
+
+        <%= f.submit "view album", class: "btn btn-primary", style: "width:200px" %>
+      <% end %>
+    </div>
+  </div>
+  <br>
+<% end %>

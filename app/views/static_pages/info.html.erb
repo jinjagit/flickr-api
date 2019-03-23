@@ -1,0 +1,27 @@
+<h4><%= "Flickr user:" %></h4><br>
+<h4><%= "username: #{@info.username}" %></h4>
+<h4><%= "real name: #{@info.real_name}" %></h4>
+<h4><%= "user ID: #{@info.id}" %></h4>
+<h4><%= "total n of public photos: #{@info.photos_count}" %></h4>
+<h4><%= "total n of public albums: #{@sets.length}" %></h4>
+
+<div style="height:20px;"></div>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(:show, url: photos_path, method: :get) do |f| %>
+      <%= f.hidden_field :user_id, value: @info.id %>
+
+      <%= f.submit "view all photos", class: "btn btn-primary", style: "width:40%" %>
+    <% end %>
+  </div>
+</div>
+<div style="height:20px;"></div>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(:show, url: albums_path, method: :get) do |f| %>
+      <%= f.hidden_field :user_id, value: @info.id %>
+
+      <%= f.submit "view album(s)", class: "btn btn-primary", style: "width:40%" %>
+    <% end %>
+  </div>
+</div>

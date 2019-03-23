@@ -7,9 +7,12 @@
   box-sizing:         border-box;
 }
 
-$white: white;
 $dark-blue: #0046a8;
 $light-blue: #c9dfff;
+
+h4 {
+  color: white;
+}
 
 body {
   font-family: 'Rubik', sans-serif;
@@ -57,7 +60,7 @@ header {
   font-family: 'Rubik:900', sans-serif;
   font-size: 2em;
   font-weight: bold;
-  color: $white;
+  color: white;
   letter-spacing: 1px;
   padding-top: 6px;
   &:hover {

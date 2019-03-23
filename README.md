@@ -8,6 +8,9 @@ As well as satisfying the project criteria, I also added the following features:
 
   * mobile/desktop responsive layout (all views)
   * pagination of photo display, using 'will-paginate' gem
+  * find Flickr user via user id or username
+  * return basic info of Flickr user (id, username, real name, total public photos, titles of public albums)
+  * view all photos or view by album
 
 ## Getting started:
 
