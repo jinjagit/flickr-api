@@ -12,7 +12,9 @@
 <div class="hidden-lg hidden-md"  style="width:100%;">
   <div class="row">
       <% @photos.each do |photo| %>
-        <%= image_tag photo.source_url, class: 'img-responsive center' %>
+        <%= link_to "http://flickr.com/photo.gne?id=#{photo.id}" do %>
+          <%= image_tag photo.source_url, class: 'img-responsive center' %>
+        <% end %>
       <% end %>
   </div>
 </div>
@@ -22,8 +24,10 @@
 </div>
 <div class="hidden-sm hidden-xs center-box">
   <% @photos.each do |photo| %>
-    <%= image_tag photo.source_url, size: "#{photo.width}x#{photo.height}", class: 'photo' %>
-    <%#= photo.id %>
+    <%= link_to "http://flickr.com/photo.gne?id=#{photo.id}" do %>
+      <%= image_tag photo.source_url, size: "#{photo.width}x#{photo.height}", class: 'photo' %>
+      <%#= photo.id %>
+    <% end %>
   <% end %>
 </div>
 

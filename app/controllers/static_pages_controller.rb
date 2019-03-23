@@ -24,8 +24,8 @@ class StaticPagesController < ApplicationController
 
   def photos
     @photos = []
-    id = params[:show][:user_id]
-    person = Flickr.people.find(id)
+    @id = params[:show][:user_id]
+    person = Flickr.people.find(@id)
     @info = person.get_info!
 
     total_photos = @info.photos_count
@@ -33,7 +33,7 @@ class StaticPagesController < ApplicationController
 
     pages.times do |i|
       page_n = i + 1
-      result = Flickr.photos.search(user_id: id, page: page_n, per_page: 500).map(&:medium500!) # max per_page = 500
+      result = Flickr.photos.search(user_id: @id, page: page_n, per_page: 500).map(&:medium500!) # max per_page = 500
       result.each do |e|
         @photos << e
       end
@@ -52,8 +52,8 @@ class StaticPagesController < ApplicationController
     @photos = []
     album_id = params[:album][:set_id]
     @title = params[:album][:title]
-    id = params[:album][:user_id]
-    person = Flickr.people.find(id)
+    @id = params[:album][:user_id]
+    person = Flickr.people.find(@id)
     sets = person.get_sets
     set = sets.detect {|e| e.title == @title}
 
