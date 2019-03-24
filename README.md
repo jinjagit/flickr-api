@@ -18,7 +18,7 @@ As well as satisfying the project criteria, I also added the following features:
 
 ## Screenshots:
 
-Find user form(s) -> User info: select 'view album(s)' -> Album list: select 'view album(s)' ("New York") -> View album
+Find user form(s) -> User info: select 'view album(s)' -> Album list: select 'view album(s)' "New York" -> View album
 
 ![findr-row.png](app/assets/images/findr-row.png)
 
