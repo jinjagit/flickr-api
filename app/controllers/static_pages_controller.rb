@@ -11,12 +11,13 @@ class StaticPagesController < ApplicationController
       if params[:find_by].key?("id")
         person = Flickr.people.find(params[:find_by][:id])
       elsif params[:find_by].key?("username")
-        raise NoMethodError if params[:find_by][:username] == '' # Flickr user exist with username == '', but has no photos!
+        raise NoMethodError if params[:find_by][:username] == '' # Flickr user exists with username == '', but has no photos!
         person = Flickr.people.find_by_username(params[:find_by][:username])
       end
 
       @sets = person.get_sets
       @info = person.get_info!
+
     rescue StandardError => e
       if params[:find_by][:id] == ''
         form_error("Error: user ID cannot be blank")
@@ -79,7 +80,6 @@ class StaticPagesController < ApplicationController
   private
 
     def form_error(error)
-      puts error
       flash[:error] = error
       redirect_to root_path
     end
