@@ -6,8 +6,6 @@ class StaticPagesController < ApplicationController
 
   def info
     begin
-      @photos = []
-
       if params[:find_by].key?("id")
         person = Flickr.people.find(params[:find_by][:id])
       elsif params[:find_by].key?("username")
