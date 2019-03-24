@@ -1,3 +1,7 @@
+<% flash.each do |message_type, message| %>
+  <%= content_tag(:div, message, class: "alert alert-#{message_type} center") %>
+<% end %>
+
 <h4>Find any Flickr user's photos and info.</h4>
 <h4>Search using any valid details,</h4>
 <h4>or just use a suggested value.</h4>

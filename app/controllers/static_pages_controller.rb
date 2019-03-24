@@ -5,21 +5,27 @@ class StaticPagesController < ApplicationController
   end
 
   def info
-    @photos = []
-    id = ''
+    begin
+      @photos = []
 
-    if params[:find_by].key?("id")
-      id = params[:find_by][:id]
-      person = Flickr.people.find(id)
-    elsif params[:find_by].key?("username")
-      person = Flickr.people.find_by_username(params[:find_by][:username])
-      id = person.id
-    else
-      puts "No details provided" # PLUS error handling!
+      if params[:find_by].key?("id")
+        person = Flickr.people.find(params[:find_by][:id])
+      elsif params[:find_by].key?("username")
+        raise NoMethodError if params[:find_by][:username] == '' # Flickr user exist with username == '', but has no photos!
+        person = Flickr.people.find_by_username(params[:find_by][:username])
+      end
+
+      @sets = person.get_sets
+      @info = person.get_info!
+    rescue StandardError => e
+      if params[:find_by][:id] == ''
+        form_error("Error: user ID cannot be blank")
+      elsif params[:find_by][:username] == ''
+        form_error("Error: username cannot be blank")
+      else
+        form_error("#{e.class}: #{e.message}")
+      end
     end
-
-    @sets = person.get_sets # what happens if no sets?
-    @info = person.get_info!
   end
 
   def photos
@@ -69,4 +75,12 @@ class StaticPagesController < ApplicationController
 
     @photos = @photos.paginate(page: params[:page], per_page: 100)
   end
+
+  private
+
+    def form_error(error)
+      puts error
+      flash[:error] = error
+      redirect_to root_path
+    end
 end

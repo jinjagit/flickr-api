@@ -23,6 +23,19 @@ body {
   padding: 0px;
 }
 
+.alert {
+  color: red;
+  font-size: 1.3em;
+  width: 70%;
+  max-width: 400px;
+  text-align: center;
+  padding: 0px;
+  background-color: white;
+  border-style: solid;
+  border-color: red;
+  border-width: 3px;
+}
+
 /* header */
 
 .navbar {
