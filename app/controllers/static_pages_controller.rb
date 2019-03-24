@@ -30,23 +30,11 @@ class StaticPagesController < ApplicationController
   end
 
   def photos
-    @photos = []
-    @id = params[:show][:user_id]
-    person = Flickr.people.find(@id)
+    id = params[:show][:user_id]
+    person = Flickr.people.find(id)
     @info = person.get_info!
-
-    total_photos = @info.photos_count
-    pages = (total_photos / 500.floor) + 1
-
-    pages.times do |i|
-      page_n = i + 1
-      result = Flickr.photos.search(user_id: @id, page: page_n, per_page: 500).map(&:medium500!) # max per_page = 500
-      result.each do |e|
-        @photos << e
-      end
-    end
-
-    @photos = @photos.paginate(page: params[:page], per_page: 100)
+    count = @info.photos_count
+    get_photos(count, &lambda{|p| return Flickr.photos.search(user_id: id, page: p, per_page: 500).map(&:medium500!)})
   end
 
   def albums
@@ -56,25 +44,12 @@ class StaticPagesController < ApplicationController
   end
 
   def album
-    @photos = []
     @title = params[:album][:title]
-    @id = params[:album][:user_id]
-    person = Flickr.people.find(@id)
+    person = Flickr.people.find(params[:album][:user_id])
     sets = person.get_sets
     set = sets.detect {|e| e.title == @title}
-
-    total_photos = set.photos_count
-    pages = (total_photos / 500.floor) + 1
-
-    pages.times do |i|
-      page_n = i + 1
-      result = set.get_photos(page: page_n, per_page: 500).map(&:medium500!) # max per_page = 500
-      result.each do |e|
-        @photos << e
-      end
-    end
-
-    @photos = @photos.paginate(page: params[:page], per_page: 100)
+    count = set.photos_count
+    get_photos(count, &lambda{|p| return set.get_photos(page: p, per_page: 500).map(&:medium500!)})
   end
 
   private
@@ -82,5 +57,20 @@ class StaticPagesController < ApplicationController
     def form_error(error)
       flash[:error] = error
       redirect_to root_path
+    end
+
+    def get_photos(count, &api_search)
+      @photos = []
+      pages = (count / 500.floor) + 1
+
+      pages.times do |i|
+        page_n = i + 1
+        result = yield(page_n)
+        result.each do |e|
+          @photos << e
+        end
+      end
+
+      @photos = @photos.paginate(page: params[:page], per_page: 100)
     end
 end
