@@ -12,6 +12,21 @@ As well as satisfying the project criteria, I also added the following features:
   * return basic info of Flickr user (id, username, real name, total public photos count, public albums count)
   * view all Flickr user's photos or view by album (select album title)
   * clicking on photo redirects to Flickr photo page
+  * error handling for form submission (including Flickr-API errors)
+
+## Screenshots:
+
+Find user form(s) -> User info. -> Select 'view album(s)' -> Select 'view album'
+
+![findr-row.png](app/assets/images/findr-row.png)
+
+Desktop layout:
+
+![findr-desktop.png](app/assets/images/findr-desktop.png)
+
+Example Flickr-API error on form submission:
+
+![findr-error.png](app/assets/images/findr-error.png)
 
 ## Getting started:
 
