@@ -22,7 +22,7 @@ Find user form(s) -> User info. -> Select 'view album(s)' -> Select 'view album'
 
 Desktop layout:
 
-![findr-desktop.png](app/assets/images/findr-desktop.png)
+![findr-desktop.jpg](app/assets/images/findr-desktop.jpg)
 
 Example Flickr-API error on form submission:
 
