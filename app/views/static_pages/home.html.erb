@@ -5,23 +5,23 @@
 <h4>Find any Flickr user's photos and info.</h4>
 <h4>Search using any valid details,</h4>
 <h4>or just use a suggested value.</h4>
+<div style="height:20px;"></div>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <div class="center form">
       <%= form_for(:find_by, url: info_path, method: :get) do |f| %>
-        <div style="height:20px;"></div>
         <%= f.text_field :id, class: 'form-control field', value: "24448805@N07" %>
         <%= f.submit "find by user ID", class: "btn btn-primary" %>
       <% end %>
     </div>
   </div>
 </div>
+<h4>OR</h4>
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <div class="center form">
       <%= form_for(:find_by, url: info_path, method: :get) do |f| %>
-        <h4>OR</h4>
         <%= f.text_field :username, class: 'form-control field', value: "Tony Shi Photos" %>
         <%= f.submit "find by username", class: "btn btn-primary" %>
       <% end %>
