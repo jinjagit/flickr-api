@@ -38,7 +38,7 @@ To get started with the app, clone the repo and then install the needed gems:
 $ bundle install --without production
 ```
 
-Next, migrate the database:
+Next, migrate the database (required to create schema.rb for rspec to function, despite the app not using database(s)):
 
 ```
 $ rails db:migrate
