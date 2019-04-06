@@ -39,7 +39,7 @@ Notes:
 
 Output of running all Rspec tests:
 
-![rspec-flickr.png](app/assets/images/rspec-flickr.png)
+![flickr-rspec.png](app/assets/images/flickr-rspec.png)
 
 ## Getting started:
 

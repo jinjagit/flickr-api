@@ -21,7 +21,7 @@ RSpec.feature "Flickr API features", type: :feature do
     @invalid_username = "this username does not exist"
   end
 
-  describe "Flickr user search (home page)" do
+  describe "Flickr user search (home page) returns user info" do
     scenario "when valid Flickr user ID submitted" do
       VCR.use_cassette('correct_ID_search') do
         visit root_path
@@ -45,7 +45,9 @@ RSpec.feature "Flickr API features", type: :feature do
         expect(page).to have_current_path(info_path, only_path: true)
       end
     end
+  end
 
+  describe "Flickr user search (home page) does not return user info" do
     scenario "when invalid Flickr user ID submitted" do
       VCR.use_cassette('invalid_ID_search') do
         visit root_path
@@ -87,7 +89,7 @@ RSpec.feature "Flickr API features", type: :feature do
     end
   end
 
-  describe "Flickr user info found (info page)" do
+  describe "Photos display correctly (all photos path)" do
     before do
       VCR.use_cassette('correct_ID_search') do
         visit root_path
@@ -140,7 +142,7 @@ RSpec.feature "Flickr API features", type: :feature do
     end
   end
 
-  describe "Flickr user info found (info page)" do
+  describe "Photos display correctly (album path)" do
     before do
       VCR.use_cassette('correct_ID_search') do
         visit root_path
