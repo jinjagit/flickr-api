@@ -11,7 +11,7 @@
   <div class="col-md-6 col-md-offset-3">
     <div class="center form">
       <%= form_for(:find_by, url: info_path, method: :get) do |f| %>
-        <%= f.text_field :id, class: 'form-control field', value: "24448805@N07" %>
+        <%= f.text_field :id, class: 'form-control field', value: "24448805@N07", label: "id" %>
         <%= f.submit "find by user ID", class: "btn btn-primary" %>
       <% end %>
     </div>

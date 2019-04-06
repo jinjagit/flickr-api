@@ -41,7 +41,6 @@ gem 'figaro'
 gem 'will_paginate', '~> 3.1.0'
 
 group :development, :test do
-  gem 'rspec-rails', '~> 3.6.0'
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3', '~> 1.3.6'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -59,6 +58,10 @@ group :development do
 end
 
 group :test do
+  gem 'rspec-rails', '~> 3.6.0'
+  gem 'capybara', '~> 2.15.2'
+  gem 'vcr'
+  gem 'webmock'
   gem 'rails-controller-testing', '1.0.2'
   gem 'minitest',                 '5.10.3'
   gem 'minitest-reporters',       '1.1.14'
