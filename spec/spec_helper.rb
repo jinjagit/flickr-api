@@ -93,7 +93,7 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 =end
-  # Require every ruby file inside the spec/support directory, and subdirectories, 
+  # Require every ruby file inside the spec/support directory, and subdirectories,
   # so that it can be used directly in your tests.
   Dir["./spec/support/**/*.rb"].each { |f| require f }
 end

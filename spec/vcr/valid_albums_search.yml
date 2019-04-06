@@ -1,0 +1,106 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.flickr.com/services/rest?api_key=4c79fdf42257f481973ffde69bfe9158&format=json&method=flickr.photosets.getList&nojsoncallback=1&user_id=24448805@N07
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.4
+      Authorization:
+      - OAuth oauth_consumer_key="4c79fdf42257f481973ffde69bfe9158", oauth_nonce="e3a5df1d12abc544dcd859788c88d7f6",
+        oauth_signature="rfxB77U4iUYUqqlVNac5i17MKmc%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1554554988", oauth_token="", oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 06 Apr 2019 12:49:49 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '2710'
+      P3p:
+      - policyref="https://policies.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM
+        DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND
+        PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      Cache-Control:
+      - private
+      X-Served-By:
+      - www68.flickr.bf1.yahoo.com
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding
+      Age:
+      - '1'
+      Server:
+      - ATS
+      Referrer-Policy:
+      - no-referrer-when-downgrade
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=15552000
+      Expect-Ct:
+      - max-age=31536000, report-uri="http://csp.yahoo.com/beacon/csp?src=yahoocom-expect-ct-report-only"
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Public-Key-Pins-Report-Only:
+      - max-age=2592000; pin-sha256="2fRAUXyxl4A1/XHrKNBmc8bTkzA7y4FB/GLJuNAzCqY=";
+        pin-sha256="I/Lt/z7ekCWanjD0Cvj5EqXls2lOaThEA0H2Bg4BT/o="; pin-sha256="Wd8xe/qfTwq3ylFNd3IpaqLHZbh2ZNCLluVzmeNkcpw=";
+        pin-sha256="WoiWRyIOVNa9ihaBciRSC7XHjliYS9VwUGOIud4PB18="; pin-sha256="i7WTqTvh0OioIruIfFR4kMPnBqrS2rdiVPl/s2uC/CY=";
+        pin-sha256="r/mIkG3eEpVdm+u/ko/cwxzOMo1bk4TyHIlByibiA5E="; pin-sha256="uUwZgwDOxcBXrQcntwu+kYFpkiVkOaezL0WYEZ3anJc=";
+        pin-sha256="dolnbtzEBnELx/9lOEQ22e6OZO/QNb6VSSX2XHA3E7A="; includeSubdomains;
+        report-uri="http://csp.yahoo.com/beacon/csp?src=yahoocom-hpkp-report-only"
+    body:
+      encoding: ASCII-8BIT
+      string: '{"photosets":{"page":1,"pages":1,"perpage":33,"total":33,"photoset":[{"id":"72157606319933770","primary":"19272672595","secret":"948b4963b8","server":"465","farm":1,"photos":958,"videos":0,"title":{"_content":"New
+        York"},"description":{"_content":"Five Boroughs of New York City"},"needs_interstitial":0,"visibility_can_see_set":1,"count_views":"39316","count_comments":"9","can_comment":0,"date_create":"1216771657","date_update":"1549389498"},{"id":"72157625781056654","primary":"44249125060","secret":"a5c01f574b","server":"4918","farm":5,"photos":102,"videos":0,"title":{"_content":"California"},"description":{"_content":"SoCal
+        - L.A\nNoCal - S.F\nOtherCal - Yosemite"},"needs_interstitial":0,"visibility_can_see_set":1,"count_views":"411","count_comments":"0","can_comment":0,"date_create":"1294552865","date_update":"1549389498"},{"id":"72157632704433824","primary":"16758782938","secret":"0d4f00a16f","server":"8721","farm":9,"photos":104,"videos":0,"title":{"_content":"Upstate
+        New York"},"description":{"_content":"Beautiful New York State - Syracuse
+        - Skaneateles - Chittenango - Finger Lakes - Ithaca - Albany -  Letchworth
+        - Watkins Glen - Niagara Falls - Buffalo - Bear Mountain"},"needs_interstitial":0,"visibility_can_see_set":1,"count_views":"1402","count_comments":"0","can_comment":0,"date_create":"1360170005","date_update":"1549389498"},{"id":"72157645837155190","primary":"29201283368","secret":"1c92f5f373","server":"1823","farm":2,"photos":66,"videos":0,"title":{"_content":"Shanghai,
+        China"},"description":{"_content":"City of Shanghai"},"needs_interstitial":0,"visibility_can_see_set":1,"count_views":"535","count_comments":"0","can_comment":0,"date_create":"1407405110","date_update":"1549389498"},{"id":"72157625742297274","primary":"36737487226","secret":"de7621138a","server":"4436","farm":5,"photos":25,"videos":0,"title":{"_content":"Nevada"},"description":{"_content":"City
+        of Las Vegas"},"needs_interstitial":0,"visibility_can_see_set":1,"count_views":"500","count_comments":"0","can_comment":0,"date_create":"1294107970","date_update":"1549389498"},{"id":"72157624008426844","primary":"32385883632","secret":"44ba785b0a","server":"322","farm":1,"photos":22,"videos":0,"title":{"_content":"Illinois"},"description":{"_content":"City
+        of Chicago"},"needs_interstitial":0,"visibility_can_see_set":1,"count_views":"430","count_comments":"0","can_comment":0,"date_create":"1273195747","date_update":"1549389498"},{"id":"72157644687919425","primary":"14318065733","secret":"45334e45ef","server":"2895","farm":3,"photos":16,"videos":0,"title":{"_content":"Massachusetts"},"description":{"_content":"City
+        of Boston and Cambridge"},"needs_interstitial":0,"visibility_can_see_set":1,"count_views":"154","count_comments":"0","can_comment":0,"date_create":"1400177537","date_update":"1549389498"},{"id":"72157606319860090","primary":"18822126266","secret":"d88a1af023","server":"5612","farm":6,"photos":14,"videos":0,"title":{"_content":"Pennsylvania"},"description":{"_content":"City
+        of Philadelphia and Pittsburgh"},"needs_interstitial":0,"visibility_can_see_set":1,"count_views":"787","count_comments":"0","can_comment":0,"date_create":"1216771112","date_update":"1549389498"},{"id":"72157606319890168","primary":"17203846094","secret":"be337fd190","server":"8894","farm":9,"photos":21,"videos":0,"title":{"_content":"New
+        Jersey"},"description":{"_content":"Jersey City, Bayonne, Hoboken, Newark
+        Bay and New Jersey Transit Northeast Corridor"},"needs_interstitial":0,"visibility_can_see_set":1,"count_views":"1225","count_comments":"0","can_comment":0,"date_create":"1216771304","date_update":"1549389498"},{"id":"72157681737874444","primary":"35454060622","secret":"a149fe97af","server":"4232","farm":5,"photos":7,"videos":0,"title":{"_content":"Texas"},"description":{"_content":"City
+        of Dallas"},"needs_interstitial":0,"visibility_can_see_set":1,"count_views":"20","count_comments":"0","can_comment":0,"date_create":"1496843392","date_update":"1549389498"},{"id":"72157649513636553","primary":"17112806508","secret":"7095b4da80","server":"7685","farm":8,"photos":22,"videos":0,"title":{"_content":"Hawaii"},"description":{"_content":"Honolulu,
+        Punch Bowl, Diamond Head and Lanikai"},"needs_interstitial":0,"visibility_can_see_set":1,"count_views":"220","count_comments":"0","can_comment":0,"date_create":"1428512266","date_update":"1549389498"},{"id":"72157670032359238","primary":"42912186261","secret":"c6d63baa45","server":"900","farm":1,"photos":7,"videos":0,"title":{"_content":"Philippines"},"description":{"_content":""},"needs_interstitial":0,"visibility_can_see_set":1,"count_views":"2","count_comments":"0","can_comment":0,"date_create":"1528779698","date_update":"1549389498"},{"id":"72157624958319762","primary":"7181720534","secret":"e6bf2ee3d7","server":"5329","farm":6,"photos":20,"videos":0,"title":{"_content":"Changchun,
+        China"},"description":{"_content":"City of Changchun"},"needs_interstitial":0,"visibility_can_see_set":1,"count_views":"1565","count_comments":"0","can_comment":0,"date_create":"1284507243","date_update":"1549389498"},{"id":"72157606323354091","primary":"3321745096","secret":"611dc4bd9e","server":"3608","farm":4,"photos":9,"videos":0,"title":{"_content":"D.C."},"description":{"_content":"Washington
+        District of Columbia and Arlington, Virginia"},"needs_interstitial":0,"visibility_can_see_set":1,"count_views":"820","count_comments":"0","can_comment":0,"date_create":"1216771191","date_update":"1549389498"},{"id":"72157606323366635","primary":"4579880119","secret":"c03a62a6c4","server":"4014","farm":5,"photos":6,"videos":0,"title":{"_content":"Minnesota"},"description":{"_content":"City
+        of Minneapolis"},"needs_interstitial":0,"visibility_can_see_set":1,"count_views":"454","count_comments":"0","can_comment":0,"date_create":"1216771244","date_update":"1549389498"},{"id":"72157625027852234","primary":"15101410067","secret":"cfb89a89fb","server":"5566","farm":6,"photos":14,"videos":0,"title":{"_content":"Beijing,
+        China"},"description":{"_content":"City of Beijing and the Great Wall of China"},"needs_interstitial":0,"visibility_can_see_set":1,"count_views":"429","count_comments":"0","can_comment":0,"date_create":"1285382383","date_update":"1549389498"},{"id":"72157680687164855","primary":"32468420284","secret":"d632130baf","server":"2817","farm":3,"photos":2,"videos":0,"title":{"_content":"Hong
+        Kong, China"},"description":{"_content":"Central District of Hong Kong"},"needs_interstitial":0,"visibility_can_see_set":1,"count_views":"20","count_comments":"0","can_comment":0,"date_create":"1487877084","date_update":"1549389498"},{"id":"72157630639084680","primary":"7699563840","secret":"d6c38e87f2","server":"8428","farm":9,"photos":10,"videos":0,"title":{"_content":"Ontario,
+        Canada"},"description":{"_content":"City of Ontario and Niagara Falls"},"needs_interstitial":0,"visibility_can_see_set":1,"count_views":"195","count_comments":"0","can_comment":0,"date_create":"1342632750","date_update":"1549389498"},{"id":"72157646485864984","primary":"36156795902","secret":"50be6467a8","server":"4437","farm":5,"photos":5,"videos":0,"title":{"_content":"Washington"},"description":{"_content":"City
+        of Seattle"},"needs_interstitial":0,"visibility_can_see_set":1,"count_views":"36","count_comments":"0","can_comment":0,"date_create":"1413553439","date_update":"1549389498"},{"id":"72157673793163656","primary":"37004401192","secret":"77c255148a","server":"4420","farm":5,"photos":27,"videos":0,"title":{"_content":"Utah"},"description":{"_content":"Arches,
+        Canyonlands &amp; Zion National Parks &amp; Grand Staircase Escalante"},"needs_interstitial":0,"visibility_can_see_set":1,"count_views":"29","count_comments":"0","can_comment":0,"date_create":"1473914387","date_update":"1549389498"},{"id":"72157674188541446","primary":"29587107900","secret":"9b277e40cc","server":"5824","farm":6,"photos":13,"videos":0,"title":{"_content":"Arizona"},"description":{"_content":"Monument
+        Valley - Horseshoe Bend - Antelope Canyon - Glen Canyon"},"needs_interstitial":0,"visibility_can_see_set":1,"count_views":"28","count_comments":"0","can_comment":0,"date_create":"1474659427","date_update":"1549389498"},{"id":"72157613581588053","primary":"3298738343","secret":"03cd9d1f91","server":"3481","farm":4,"photos":5,"videos":0,"title":{"_content":"North
+        Carolina"},"description":{"_content":"Queen City - Charlotte\nIt''s a road
+        trip"},"needs_interstitial":0,"visibility_can_see_set":1,"count_views":"893","count_comments":"0","can_comment":0,"date_create":"1234296409","date_update":"1549389498"},{"id":"72157630597467176","primary":"7586122976","secret":"6294eb6cdc","server":"8431","farm":9,"photos":2,"videos":0,"title":{"_content":"Michigan"},"description":{"_content":"City
+        of Detroit &amp; Ambassador Bridge"},"needs_interstitial":0,"visibility_can_see_set":1,"count_views":"87","count_comments":"0","can_comment":0,"date_create":"1342412442","date_update":"1549389498"},{"id":"72157606323461485","primary":"4102345834","secret":"2e95a0a3c3","server":"2607","farm":3,"photos":2,"videos":0,"title":{"_content":"Virginia"},"description":{"_content":"Richmond
+        and Springfield"},"needs_interstitial":0,"visibility_can_see_set":1,"count_views":"488","count_comments":"0","can_comment":0,"date_create":"1216772020","date_update":"1549389498"},{"id":"72157617621769334","primary":"3288959529","secret":"e9576ac82a","server":"3300","farm":4,"photos":2,"videos":0,"title":{"_content":"Maryland"},"description":{"_content":"City
+        of Baltimore"},"needs_interstitial":0,"visibility_can_see_set":1,"count_views":"154","count_comments":"0","can_comment":0,"date_create":"1241324552","date_update":"1549389498"},{"id":"72157681966063104","primary":"35098124242","secret":"51ac9ce8d7","server":"4228","farm":5,"photos":2,"videos":0,"title":{"_content":"New
+        Mexico"},"description":{"_content":""},"needs_interstitial":0,"visibility_can_see_set":1,"count_views":"5","count_comments":"0","can_comment":0,"date_create":"1497286460","date_update":"1549389498"},{"id":"72157684641424196","primary":"34328032603","secret":"809596fa53","server":"4241","farm":5,"photos":1,"videos":0,"title":{"_content":"Missouri"},"description":{"_content":"City
+        of St Louis"},"needs_interstitial":0,"visibility_can_see_set":1,"count_views":"2","count_comments":"0","can_comment":0,"date_create":"1496761950","date_update":"1549389498"},{"id":"72157672544084111","primary":"28931604403","secret":"45f4b1c1bc","server":"8426","farm":9,"photos":1,"videos":0,"title":{"_content":"Colorado"},"description":{"_content":"City
+        of Denver"},"needs_interstitial":0,"visibility_can_see_set":1,"count_views":"5","count_comments":"0","can_comment":0,"date_create":"1473390236","date_update":"1549389498"},{"id":"72157661586478758","primary":"23906486468","secret":"7903d830aa","server":"4499","farm":5,"photos":1,"videos":0,"title":{"_content":"Japan"},"description":{"_content":""},"needs_interstitial":0,"visibility_can_see_set":1,"count_views":"8","count_comments":"0","can_comment":0,"date_create":"1508264983","date_update":"1549389498"},{"id":"72157658404017651","primary":"25031266725","secret":"3803165dd8","server":"1469","farm":2,"photos":27,"videos":0,"title":{"_content":"Interiors"},"description":{"_content":""},"needs_interstitial":0,"visibility_can_see_set":1,"count_views":"85","count_comments":"0","can_comment":0,"date_create":"1441821294","date_update":"1549389498"},{"id":"72157630715901748","primary":"21625605649","secret":"eff5d8692c","server":"607","farm":1,"photos":85,"videos":0,"title":{"_content":"Panoramas"},"description":{"_content":"Super
+        Panoramic Images..\n\nStitched High-resolution big-size panoramas ready for
+        big print !"},"needs_interstitial":0,"visibility_can_see_set":1,"count_views":"16887","count_comments":"0","can_comment":0,"date_create":"1343067877","date_update":"1549389498"},{"id":"72157706410621675","primary":"31936866997","secret":"6cc3b82c52","server":"7908","farm":8,"photos":11,"videos":0,"title":{"_content":"From
+        20X"},"description":{"_content":""},"needs_interstitial":0,"visibility_can_see_set":1,"count_views":"7","count_comments":"0","can_comment":0,"date_create":"1549388839","date_update":"1549389498"},{"id":"72157689444711263","primary":"32424345160","secret":"24a6f2423f","server":"2088","farm":3,"photos":6,"videos":0,"title":{"_content":"Of
+        20X"},"description":{"_content":""},"needs_interstitial":0,"visibility_can_see_set":1,"count_views":"22","count_comments":"0","can_comment":0,"date_create":"1549389495","date_update":"1549389498"}]},"stat":"ok"}'
+    http_version: 
+  recorded_at: Sat, 06 Apr 2019 12:49:49 GMT
+recorded_with: VCR 4.0.0
