@@ -15,7 +15,7 @@ As well as satisfying the project criteria, I also added the following features:
   * view all Flickr user's photos or view by album (select album title)
   * clicking on photo redirects to Flickr photo page
   * error handling for form submission (including Flickr-API errors)
-  * full suite of Rspec tests, including use of of [VCR Gem](https://github.com/vcr/vcr) for all tests which involve an expected response from the Flickr API.
+  * full suite of Rspec tests, including use of of [VCR gem](https://github.com/vcr/vcr) for all tests which involve an expected response from the Flickr API.
 
 ## Screenshots:
 
@@ -35,7 +35,7 @@ Example Flickr-API error on form submission:
 
 Notes:
   * I am aware that controller tests were 'soft deprecated' in Rails 5, but I included them here for my own practice with Rspec.
-  * Includes use of [VCR Gem](https://github.com/vcr/vcr) for all tests which involve an expected response from the Flickr API.
+  * Includes use of [VCR gem](https://github.com/vcr/vcr) for all tests which involve an expected response from the Flickr API.
 
 Output of running all Rspec tests:
 
