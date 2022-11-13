@@ -2,8 +2,6 @@
 
 Simon Tharby's solution to [Project 2: Using a Third Party API](https://www.theodinproject.com/courses/ruby-on-rails/lessons/apis?ref=lnav), Project: APIS, Ruby on Rails unit, Odin Project.
 
-[View in browser](https://findr-simontharby.herokuapp.com/)
-
 ## My additional features:
 
 As well as satisfying the project criteria, I also added the following features:
